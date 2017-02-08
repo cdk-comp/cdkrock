@@ -1,0 +1,60 @@
+{
+  "name": "cdk/cdkrock",
+  "type": "project",
+  "license": "MIT",
+  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure, fork from BEDROCK",
+  "homepage": "http://cdk.co.il/",
+  "authors": [
+    {
+      "name": "Dima Minka",
+      "email": "cdk@cdk.co.il",
+      "homepage": "https://github.com/dimaminka"
+    }
+  ],
+  "keywords": [
+    "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp", "custom", "cdk"
+  ],
+  "support": {
+    "issues": "https://github.com/dimaminka/cdkrock/issues",
+    "forum": "https://github.com/dimaminka/cdkrock/issues"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "composer/installers": "~1.0.12",
+    "vlucas/phpdotenv": "^2.0.1",
+    "johnpbloch/wordpress": "4.7.2",
+    "oscarotero/env": "^1.0",
+    "roots/wp-password-bcrypt": "1.0.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.5.1"
+  },
+  "extra": {
+    "installer-paths": {
+      "wp/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "wp/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "wp-tmp"
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/phpcs"
+    ],
+    "post-install-cmd": [
+      "rsync -a wp-tmp/ wp/ && rm -rf wp-tmp"
+    ],
+    "post-update-cmd": [
+      "rsync -a wp-tmp/ wp/ && rm -rf wp-tmp"
+    ]
+  }
+}

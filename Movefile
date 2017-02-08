@@ -1,0 +1,41 @@
+local:
+  vhost: "http://vhost.local"
+  wordpress_path: "/srv/users/serverpilot/apps/"
+
+  database:
+    name: "database_name"
+    user: "user"
+    password: "password"
+    host: "127.0.0.1"
+
+cdk:
+  vhost: "http://example.com"
+  wordpress_path: "/srv/users/serverpilot/apps/"
+
+  database:
+    name: "database_name"
+    user: "user"
+    password: "password"
+    host: "127.0.0.1"
+
+  exclude:
+    - ".git/"
+    - ".gitignore"
+    - ".sass-cache/"
+    - "node_modules/"
+    - "bin/"
+    - "tmp/*"
+    - "Gemfile*"
+    - "Movefile"
+    - "wp-config.php"
+    - "wp-content/*.sql"
+    - "wp-content/*.gz"
+    - ".idea"
+    - ".DS_Store"
+    - ".gitkeep"
+    - "Thumbs.db"
+
+  ssh:
+    host: "host"
+    user: "user"
+    rsync_options: "--verbose"
