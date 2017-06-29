@@ -79,6 +79,8 @@ define( 'WP_POST_REVISIONS', 3 );
 define('AUTOSAVE_INTERVAL', 86400);
 define('WP_MEMORY_LIMIT', '512M');
 define('WP_MAX_MEMORY_LIMIT', '512M');
+define( 'MEDIA_TRASH', true );
+define( 'EMPTY_TRASH_DAYS', 10 );
 
 /**
  * Bootstrap WordPress
