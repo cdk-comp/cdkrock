@@ -29,21 +29,6 @@
     {
       "type": "package",
       "package": {
-        "name": "wp-github/lightbox-plus",
-        "type": "wordpress-plugin",
-        "version": "2.7.2",
-        "dist": {
-          "type": "zip",
-          "url": "https://github.com/wp-plugins/lightbox-plus/archive/2.7.2.zip"
-        },
-        "require" : {
-          "composer/installers": "~1.0"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
         "name": "wp-premium/wp-rocket",
         "type": "wordpress-plugin",
         "version": "3.0.3",

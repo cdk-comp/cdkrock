@@ -2,7 +2,7 @@ global:
   sql_adapter: "default"
 
 local:
-   vhost: "http://vhost.local"
+   vhost: "http://example.test"
    wordpress_path: "/srv/users/serverpilot/apps/"
 
   database:

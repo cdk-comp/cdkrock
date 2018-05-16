@@ -10,12 +10,10 @@ wp/wp-includes
 wp/wp-content/themes/*
 !wp/wp-content/themes/index.php
 !wp/wp-content/themes/.gitkeep
-!wp/wp-content/themes/TESSERACT
 
 wp/wp-content/plugins/*
 !wp/wp-content/plugins/index.php
 !wp/wp-content/plugins/.gitkeep
-!wp/wp-content/plugins/tesseract-remove-branding-master
 
 !/wp/wp-content/mu-plugins/*
 wp/wp-content/upgrade
