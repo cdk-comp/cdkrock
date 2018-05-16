@@ -71,6 +71,11 @@ Any other deployment method can be used as well with one requirement:
 
 ## Documentation
 
+Project access details:
+```txt
+Admin: admin
+Pass: password
+```
 Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://roots.io/bedrock/docs/).
 
 [roots-wp-salt]:https://roots.io/salts.html

@@ -25,15 +25,47 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wp-github/lightbox-plus",
+        "type": "wordpress-plugin",
+        "version": "2.7.2",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/wp-plugins/lightbox-plus/archive/2.7.2.zip"
+        },
+        "require" : {
+          "composer/installers": "~1.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wp-premium/wp-rocket",
+        "type": "wordpress-plugin",
+        "version": "3.0.3",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/wp-premium-themes/wp-rocket/archive/v3.0.3.zip"
+        },
+        "require" : {
+          "composer/installers": "~1.0"
+        }
+      }
     }
   ],
   "require": {
     "php": ">=5.6",
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.8.*",
+    "johnpbloch/wordpress": "4.9.*",
     "oscarotero/env": "^1.0",
-    "roots/wp-password-bcrypt": "1.0.0"
+    "roots/wp-password-bcrypt": "1.0.0",
+    "wpackagist-plugin/limit-login-attempts": "*",
+    "wp-premium/wp-rocket": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
@@ -51,10 +83,10 @@
       "vendor/bin/phpcs"
     ],
     "post-install-cmd": [
-      "rsync -a wp-tmp/ wp/ && rm -rf wp-tmp"
+      "bash post-install.sh"
     ],
     "post-update-cmd": [
-      "rsync -a wp-tmp/ wp/ && rm -rf wp-tmp"
+      "bash post-update.sh"
     ]
   }
 }

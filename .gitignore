@@ -10,10 +10,12 @@ wp/wp-includes
 wp/wp-content/themes/*
 !wp/wp-content/themes/index.php
 !wp/wp-content/themes/.gitkeep
+!wp/wp-content/themes/TESSERACT
 
 wp/wp-content/plugins/*
 !wp/wp-content/plugins/index.php
 !wp/wp-content/plugins/.gitkeep
+!wp/wp-content/plugins/tesseract-remove-branding-master
 
 !/wp/wp-content/mu-plugins/*
 wp/wp-content/upgrade
@@ -27,6 +29,7 @@ wp/wp-content/uploads/*
 wp/.htaccess
 
 # Dotenv
+.env
 .env.*
 !.env.example
 
@@ -36,12 +39,12 @@ vendor/*
 
 # Development
 .idea
-composer.lock
 node_modules
 bower_components
 public
 *.sql
 !*.gz
+Movefile
 
 ### OS's templates
 # Windows image file caches
