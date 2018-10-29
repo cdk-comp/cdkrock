@@ -1,0 +1,40 @@
+# Application
+web/wp-content/plugins/*
+!web/wp-content/plugins/.gitkeep
+!web/wp-content/plugins/index.php
+
+web/wp-content/themes/*
+!web/wp-content/themes/.gitkeep
+!web/wp-content/themes/index.php
+
+web/wp-content/uploads/*
+!web/wp-content/uploads/.gitkeep
+
+web/wp-content/mu-plugins/*/
+web/wp-content/upgrade
+
+# WordPress
+web/*.*
+web/wp-admin
+web/wp-includes
+
+!web/index.php
+!web/wp-config.php
+!web/wp-content/index.php
+
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+
+# Development
+.idea
+logs
+
+# OS
+.DS_Store
+
